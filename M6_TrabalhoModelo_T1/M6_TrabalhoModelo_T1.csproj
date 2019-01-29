@@ -67,9 +67,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Alunos\adicionar.aspx" />
+    <Content Include="Alunos\gerir.aspx" />
+    <Content Include="Alunos\pesquisar.aspx" />
+    <Content Include="App_Data\bd.mdf" />
+    <Content Include="App_Data\bd_log.ldf">
+      <DependentUpon>bd.mdf</DependentUpon>
+    </Content>
+    <Content Include="Logbook.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alunos\adicionar.aspx.cs">
+      <DependentUpon>adicionar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alunos\adicionar.aspx.designer.cs">
+      <DependentUpon>adicionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alunos\gerir.aspx.cs">
+      <DependentUpon>gerir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alunos\gerir.aspx.designer.cs">
+      <DependentUpon>gerir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alunos\pesquisar.aspx.cs">
+      <DependentUpon>pesquisar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alunos\pesquisar.aspx.designer.cs">
+      <DependentUpon>pesquisar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +110,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
