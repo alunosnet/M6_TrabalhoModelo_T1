@@ -1,4 +1,9 @@
-﻿create table alunos(
+﻿//Falta
+	-upload fotografia do aluno
+	-bootstrap formview e grid
+	-navbar
+
+create table alunos(
 nprocesso int identity primary key,
 nome varchar(100) not null,
 data_nascimento date not null,
@@ -7,4 +12,16 @@ morada varchar(100),
 codigo_postal varchar(8),
 localidade varchar(100),
 email varchar(100) check (email like '%@%.%')
+)
+
+create table disciplinas(
+codigo int identity primary key,
+nome varchar(100) not null 
+	check (len(nome)>=2),
+nrmodulos int not null 
+	check (nrmodulos>=1),
+ano_escolaridade int not null
+	check (ano_escolaridade>=10),
+maximo_faltas int not null
+	check (maximo_faltas>=1)
 )

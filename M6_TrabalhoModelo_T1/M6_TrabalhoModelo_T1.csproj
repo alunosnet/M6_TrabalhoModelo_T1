@@ -74,6 +74,9 @@
     <Content Include="App_Data\bd_log.ldf">
       <DependentUpon>bd.mdf</DependentUpon>
     </Content>
+    <Content Include="Disciplinas\adicionar.aspx" />
+    <Content Include="Disciplinas\gerir.aspx" />
+    <Content Include="Disciplinas\pesquisar.aspx" />
     <Content Include="Logbook.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,6 +100,27 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Alunos\pesquisar.aspx.designer.cs">
+      <DependentUpon>pesquisar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Disciplinas\adicionar.aspx.cs">
+      <DependentUpon>adicionar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Disciplinas\adicionar.aspx.designer.cs">
+      <DependentUpon>adicionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Disciplinas\gerir.aspx.cs">
+      <DependentUpon>gerir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Disciplinas\gerir.aspx.designer.cs">
+      <DependentUpon>gerir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Disciplinas\pesquisar.aspx.cs">
+      <DependentUpon>pesquisar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Disciplinas\pesquisar.aspx.designer.cs">
       <DependentUpon>pesquisar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
