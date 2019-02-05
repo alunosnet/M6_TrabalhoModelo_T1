@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M6_TrabalhoModelo_T1.Disciplinas {
+namespace M6_TrabalhoModelo_T1.Notas {
     
     
     public partial class pesquisar {
@@ -40,6 +40,15 @@ namespace M6_TrabalhoModelo_T1.Disciplinas {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+        
+        /// <summary>
         /// ListView1 control.
         /// </summary>
         /// <remarks>
@@ -47,14 +56,5 @@ namespace M6_TrabalhoModelo_T1.Disciplinas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView ListView1;
-        
-        /// <summary>
-        /// SqlDisciplinas control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDisciplinas;
     }
 }

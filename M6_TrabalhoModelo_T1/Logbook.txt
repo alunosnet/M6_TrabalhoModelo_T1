@@ -25,3 +25,13 @@ ano_escolaridade int not null
 maximo_faltas int not null
 	check (maximo_faltas>=1)
 )
+
+create table notas(
+id int identity primary key,
+data_nota date not null,
+valor_nota int check (valor_nota>=0 
+			and valor_nota<=20),
+nr_modulo int check (nr_modulo>0),
+nprocesso int references alunos(nprocesso),
+codigo_disciplina int references disciplinas(codigo)
+)
