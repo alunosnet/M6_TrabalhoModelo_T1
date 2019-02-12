@@ -13,5 +13,17 @@ namespace M6_TrabalhoModelo_T1.Alunos
         {
 
         }
+
+        protected void SqlAlunos_Inserted(object sender, SqlDataSourceStatusEventArgs e)
+        {
+            //nr processo do aluno
+            string nomeFicheiro = e.Command.Parameters["@novo"].Value.ToString();
+            //referencia para o file upload
+            FileUpload ficheiro = FormView1.FindControl("FileUpload1") as FileUpload;
+            if (ficheiro.HasFile==true)
+            {
+                ficheiro.SaveAs(Server.MapPath("~/Imagens/")+nomeFicheiro+".jpg" );
+            }
+        }
     }
 }

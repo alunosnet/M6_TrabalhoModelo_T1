@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<link href="../css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/css.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -63,8 +65,8 @@
     </nav>
     <!--Menu-->
     <form id="form1" runat="server">
-        <div>
-            <asp:FormView ID="FormView1" runat="server" DataKeyNames="id" DataSourceID="SqlNotas" DefaultMode="Insert">
+        <div class="container-fluid">
+            <asp:FormView Width="100%" ID="FormView1" runat="server" DataKeyNames="id" DataSourceID="SqlNotas" DefaultMode="Insert">
                 <EditItemTemplate>
                     id:
                     <asp:Label Text='<%# Eval("id") %>' runat="server" ID="idLabel1" /><br />
@@ -82,18 +84,20 @@
                 </EditItemTemplate>
                 <InsertItemTemplate>
                     data_nota:
-                    <asp:TextBox Text='<%# Bind("data_nota") %>' runat="server" ID="data_notaTextBox" /><br />
+                    <asp:TextBox CssClass="form-control" Text='<%# Bind("data_nota") %>' runat="server" ID="data_notaTextBox" /><br />
                     valor_nota:
-                    <asp:TextBox Text='<%# Bind("valor_nota") %>' runat="server" ID="valor_notaTextBox" /><br />
+                    <asp:TextBox CssClass="form-control" Text='<%# Bind("valor_nota") %>' runat="server" ID="valor_notaTextBox" /><br />
                     nr_modulo:
-                    <asp:TextBox Text='<%# Bind("nr_modulo") %>' runat="server" ID="nr_moduloTextBox" /><br />
+                    <asp:TextBox CssClass="form-control" Text='<%# Bind("nr_modulo") %>' runat="server" ID="nr_moduloTextBox" /><br />
                     nprocesso:
-                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlAlunos" DataTextField="nome" DataValueField="nprocesso" SelectedValue='<%# Bind("nprocesso") %>'></asp:DropDownList>
+                    <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server" DataSourceID="SqlAlunos" DataTextField="nome" DataValueField="nprocesso" SelectedValue='<%# Bind("nprocesso") %>'></asp:DropDownList>
                     <asp:SqlDataSource runat="server" ID="SqlAlunos" ConnectionString='<%$ ConnectionStrings:ConnectionStringNotas %>' SelectCommand="SELECT [nprocesso], [nome] FROM [alunos]"></asp:SqlDataSource>
-                    <br />codigo_disciplina:
-                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDisciplinas" DataTextField="nome" DataValueField="codigo" SelectedValue='<%# Bind("codigo_disciplina") %>'></asp:DropDownList>
+                    <br />
+                    codigo_disciplina:
+                    <asp:DropDownList CssClass="form-control" ID="DropDownList2" runat="server" DataSourceID="SqlDisciplinas" DataTextField="nome" DataValueField="codigo" SelectedValue='<%# Bind("codigo_disciplina") %>'></asp:DropDownList>
                     <asp:SqlDataSource runat="server" ID="SqlDisciplinas" ConnectionString='<%$ ConnectionStrings:ConnectionStringNotas %>' SelectCommand="SELECT [codigo], [nome] FROM [disciplinas]"></asp:SqlDataSource>
-                    <br /><asp:LinkButton runat="server" Text="Insert" CommandName="Insert" ID="InsertButton" CausesValidation="True" />&nbsp;<asp:LinkButton runat="server" Text="Cancel" CommandName="Cancel" ID="InsertCancelButton" CausesValidation="False" />
+                    <br />
+                    <asp:LinkButton CssClass="btn btn-danger" runat="server" Text="Insert" CommandName="Insert" ID="InsertButton" CausesValidation="True" />&nbsp;<asp:LinkButton CssClass="btn btn-info" runat="server" Text="Cancel" CommandName="Cancel" ID="InsertCancelButton" CausesValidation="False" />
                 </InsertItemTemplate>
                 <ItemTemplate>
                     id:
@@ -122,7 +126,7 @@
             </asp:SqlDataSource>
         </div>
     </form>
-        <!--JS-->
+    <!--JS-->
     <script src="../js/jquery-3.3.1.slim.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>

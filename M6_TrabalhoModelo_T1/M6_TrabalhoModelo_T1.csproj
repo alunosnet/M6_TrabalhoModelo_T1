@@ -87,6 +87,7 @@
     <Content Include="Disciplinas\adicionar.aspx" />
     <Content Include="Disciplinas\gerir.aspx" />
     <Content Include="Disciplinas\pesquisar.aspx" />
+    <Content Include="Imagens\logo.png" />
     <Content Include="index.aspx" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />

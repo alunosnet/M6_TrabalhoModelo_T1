@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<link href="../css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/css.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -63,9 +65,9 @@
     </nav>
     <!--Menu-->
     <form id="form1" runat="server">
-        <div>
-            Nome:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-            <asp:Button ID="Button1" runat="server" Text="Pesquisar" />
+        <div class="container-fluid">
+            Nome:<asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" />
+            <asp:Button CssClass="btn btn-primary" ID="Button1" runat="server" Text="Pesquisar" />
             <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDisciplinas" DataKeyNames="codigo" GroupItemCount="3">
                 <AlternatingItemTemplate>
                     <td runat="server" style="">codigo:
@@ -137,7 +139,7 @@
                     </td>
                 </ItemTemplate>
                 <LayoutTemplate>
-                    <table runat="server">
+                    <table class="table table-striped" runat="server">
                         <tr runat="server">
                             <td runat="server">
                                 <table runat="server" id="groupPlaceholderContainer" style="" border="0">
@@ -171,7 +173,7 @@
             </asp:SqlDataSource>
         </div>
     </form>
-        <!--JS-->
+    <!--JS-->
     <script src="../js/jquery-3.3.1.slim.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>

@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/css.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -63,7 +65,13 @@
     </nav>
     <!--Menu-->
     <form id="form1" runat="server">
-        <div>
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h1>Sistemas de Informação</h1>
+                <h2>Módulo 6</h2>
+                <h3>Turno 1</h3>
+                <img src="Imagens/logo.png" class="img-fluid"/>
+            </div>
         </div>
     </form>
     <!--JS-->

@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<link href="../css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/css.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -63,8 +65,8 @@
     </nav>
     <!--Menu-->
     <form id="form1" runat="server">
-        <div>
-            <asp:FormView ID="FormView1" runat="server" DataKeyNames="codigo" DataSourceID="SqlDisciplinas" DefaultMode="Insert">
+        <div class="container-fluid">
+            <asp:FormView Width="100%" ID="FormView1" runat="server" DataKeyNames="codigo" DataSourceID="SqlDisciplinas" DefaultMode="Insert">
                 <EditItemTemplate>
                     codigo:
                     <asp:Label Text='<%# Eval("codigo") %>' runat="server" ID="codigoLabel1" /><br />
@@ -80,14 +82,14 @@
                 </EditItemTemplate>
                 <InsertItemTemplate>
                     nome:
-                    <asp:TextBox Text='<%# Bind("nome") %>' runat="server" ID="nomeTextBox" /><br />
+                    <asp:TextBox CssClass="form-control" Text='<%# Bind("nome") %>' runat="server" ID="nomeTextBox" /><br />
                     nrmodulos:
-                    <asp:TextBox Text='<%# Bind("nrmodulos") %>' runat="server" ID="nrmodulosTextBox" /><br />
+                    <asp:TextBox CssClass="form-control" Text='<%# Bind("nrmodulos") %>' runat="server" ID="nrmodulosTextBox" /><br />
                     ano_escolaridade:
-                    <asp:TextBox Text='<%# Bind("ano_escolaridade") %>' runat="server" ID="ano_escolaridadeTextBox" /><br />
+                    <asp:TextBox CssClass="form-control" Text='<%# Bind("ano_escolaridade") %>' runat="server" ID="ano_escolaridadeTextBox" /><br />
                     maximo_faltas:
-                    <asp:TextBox Text='<%# Bind("maximo_faltas") %>' runat="server" ID="maximo_faltasTextBox" /><br />
-                    <asp:LinkButton runat="server" Text="Insert" CommandName="Insert" ID="InsertButton" CausesValidation="True" />&nbsp;<asp:LinkButton runat="server" Text="Cancel" CommandName="Cancel" ID="InsertCancelButton" CausesValidation="False" />
+                    <asp:TextBox CssClass="form-control" Text='<%# Bind("maximo_faltas") %>' runat="server" ID="maximo_faltasTextBox" /><br />
+                    <asp:LinkButton CssClass="btn btn-danger" runat="server" Text="Insert" CommandName="Insert" ID="InsertButton" CausesValidation="True" />&nbsp;<asp:LinkButton CssClass="btn btn-info" runat="server" Text="Cancel" CommandName="Cancel" ID="InsertCancelButton" CausesValidation="False" />
                 </InsertItemTemplate>
                 <ItemTemplate>
                     codigo:
@@ -113,7 +115,7 @@
             </asp:SqlDataSource>
         </div>
     </form>
-        <!--JS-->
+    <!--JS-->
     <script src="../js/jquery-3.3.1.slim.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>

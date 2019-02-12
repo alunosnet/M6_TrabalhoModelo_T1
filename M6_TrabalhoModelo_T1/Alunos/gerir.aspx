@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<link href="../css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/css.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -63,8 +65,8 @@
     </nav>
     <!--Menu-->
     <form id="form1" runat="server">
-        <div>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="nprocesso" DataSourceID="SqlAlunos" AllowPaging="True" AllowSorting="True">
+        <div class="container-fluid">
+            <asp:GridView CssClass="table table-responsive table-striped" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="nprocesso" DataSourceID="SqlAlunos" AllowPaging="True" AllowSorting="True">
                 <Columns>
                     <asp:CommandField ShowEditButton="True" ShowDeleteButton="True"></asp:CommandField>
                     <asp:BoundField DataField="nprocesso" HeaderText="nprocesso" ReadOnly="True" InsertVisible="False" SortExpression="nprocesso"></asp:BoundField>
@@ -75,6 +77,9 @@
                     <asp:BoundField DataField="codigo_postal" HeaderText="codigo_postal" SortExpression="codigo_postal"></asp:BoundField>
                     <asp:BoundField DataField="localidade" HeaderText="localidade" SortExpression="localidade"></asp:BoundField>
                     <asp:BoundField DataField="email" HeaderText="email" SortExpression="email"></asp:BoundField>
+                    <asp:ImageField DataImageUrlField="nprocesso" DataImageUrlFormatString="~/Imagens/{0}.jpg" HeaderText="Fotografia">
+                        <ControlStyle Width="100px"></ControlStyle>
+                    </asp:ImageField>
                 </Columns>
             </asp:GridView>
             <asp:SqlDataSource runat="server" ID="SqlAlunos" ConnectionString='<%$ ConnectionStrings:ConnectionStringNotas %>' DeleteCommand="DELETE FROM alunos WHERE (nprocesso = @nprocesso)" SelectCommand="select * from alunos" UpdateCommand="UPDATE alunos SET nome = @nome, data_nascimento = @data_nascimento, genero = @genero, morada = @morada, codigo_postal = @codigo_postal, localidade = @localidade, email = @email WHERE (nprocesso = @nprocesso)">
@@ -94,7 +99,7 @@
             </asp:SqlDataSource>
         </div>
     </form>
-        <!--JS-->
+    <!--JS-->
     <script src="../js/jquery-3.3.1.slim.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>

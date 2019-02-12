@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<link href="../css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/css.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -63,9 +65,9 @@
     </nav>
     <!--Menu-->
     <form id="form1" runat="server">
-        <div>
+        <div class="container-fluid">
             <!--Isto é um comentário-->
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="codigo" DataSourceID="SqlDisciplinas" AllowPaging="True" AllowSorting="True">
+            <asp:GridView CssClass="table table-responsive table-striped" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="codigo" DataSourceID="SqlDisciplinas" AllowPaging="True" AllowSorting="True">
                 <Columns>
                     <asp:CommandField ShowEditButton="True" ShowDeleteButton="True"></asp:CommandField>
                     <asp:BoundField DataField="codigo" HeaderText="codigo" ReadOnly="True" InsertVisible="False" SortExpression="codigo"></asp:BoundField>
@@ -89,7 +91,7 @@
             </asp:SqlDataSource>
         </div>
     </form>
-        <!--JS-->
+    <!--JS-->
     <script src="../js/jquery-3.3.1.slim.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>

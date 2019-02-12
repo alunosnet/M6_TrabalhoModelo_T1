@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<link href="../css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/css.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -63,8 +65,8 @@
     </nav>
     <!--Menu-->
     <form id="form1" runat="server">
-        <div>
-            Nome:<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlAlunos" DataTextField="nome" DataValueField="nprocesso" AutoPostBack="True"></asp:DropDownList>
+        <div class="container-fluid">
+            Nome:<asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server" DataSourceID="SqlAlunos" DataTextField="nome" DataValueField="nprocesso" AutoPostBack="True"></asp:DropDownList>
             <asp:SqlDataSource runat="server" ID="SqlAlunos" ConnectionString='<%$ ConnectionStrings:ConnectionStringNotas %>' SelectCommand="SELECT [nprocesso], [nome] FROM [alunos] ORDER BY [nome]"></asp:SqlDataSource>
             <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlNotas">
                 <AlternatingItemTemplate>
@@ -131,7 +133,7 @@
                     </tr>
                 </ItemTemplate>
                 <LayoutTemplate>
-                    <table runat="server">
+                    <table class="table table-striped" runat="server">
                         <tr runat="server">
                             <td runat="server">
                                 <table runat="server" id="itemPlaceholderContainer" style="" border="0">
@@ -170,7 +172,7 @@
             </asp:SqlDataSource>
         </div>
     </form>
-        <!--JS-->
+    <!--JS-->
     <script src="../js/jquery-3.3.1.slim.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>
