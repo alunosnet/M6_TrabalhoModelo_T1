@@ -5,3 +5,5 @@ Neste trabalho vamos aplicar os conhecimentos de SQL utilizandos os objetos Data
 
 Turno 1 de 2018/2019
 Escola Secundária Emídio Navarro, Viseu
+
+https://www.youtube.com/alunosnet
